@@ -1,0 +1,70 @@
+# sno.yaml - test message to trigger synch#
+apiVersion: ran.openshift.io/v1
+kind: SiteConfig
+metadata:
+  name: "sno132"
+  namespace: "sno132"
+  labels:
+    forcesync: "2"
+spec:
+  baseDomain: "vz2.bos2.lab"
+  pullSecretRef:
+    name: "assisted-deployment-pull-secret-sno132"
+  clusterImageSetNameRef: "img4.9.37-x86-64-appsub"
+  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtSAUavTTr4dTvMOqZ/A6mg9q++qrVSNIu3vICnGUPpKGmQk4227TlaL9iwBkBqbGMvOaBZwn/b3URk/QE/El5ElzqaNNJxHqxWHGNKOJB49sVj5f57Usw07WyMy8CDy0Hk701jzvrdxqckfMEmMzWjE0C7Zpus6J3GyG3ANTYbSQGRtzdz7bcg05Xm0xCzfC/HAEF6Arz/cTv9k9rioiu1reV1qqq+FAlnKx3x/+XsG5cHMhnVuUnOU59p9pOh+v/nxq5Ysz/5iJrKNmJqkUAPShrfs3Kk2Z8TJVoEKoyyfme4uNAqBg2xZjnaPf8avfmc8uYzjHN7BA4w1fMw/mO71FCXkuxukttUeoqO2ARpofwzIeiH2wmJ7fKLaomETbZyIzYiVoZM2VKu1nPNmWOluqrpvNBnufWLpmRqWntmvT26IEGmlAjTz1HV0VZXVo+6viI3RQTJJXeZ7uTjCPz/uVsrv5U2BthWIkJ7OJEB0mcwbSJF5FOhML8dZ+/ODc= mjanardh@mjanardh.remote.csb"
+  clusters:
+  - additionalNTPSources:
+    - pool.ntp.org
+    - clock.corp.redhat.com
+    clusterLabels:
+      common: true
+      group-du-sno: ""
+      sites: sno
+    clusterName: sno132
+    clusterNetwork:
+      - cidr: 10.128.0.0/14
+        hostPrefix: 23
+    clusterProfile: du
+    clusterType: sno
+    machineNetwork:
+      - cidr: 192.168.14.0/25
+    serviceNetwork:
+      - 172.30.0.0/16
+    networkType: OVNKubernetes
+    nodes:
+    - bmcAddress: redfish-virtualmedia://192.168.14.132/redfish/v1/Systems/1
+      bmcCredentialsName:
+        name: sno132-bmc-secret
+      bootMACAddress: b4:96:91:d1:f2:34
+      bootMode: UEFI
+      rootDeviceHints:
+        deviceName: /dev/nvme0n1
+      cpuset: "0-1,30-33,62-63"
+      hostName: sno132.vz2.bos2.lab
+      nodeNetwork:
+          interfaces:
+            - name: "ens1f0"
+              macAddress: "b4:96:91:d1:f2:34"
+          config:
+            interfaces:
+              - name: "ens1f0"
+                type: ethernet
+                state: up
+                macAddress: "b4:96:91:d1:f2:34"
+                ipv4:
+                  enabled: true
+                  address:
+                  - ip: 192.168.14.25
+                    prefix-length: 27
+            dns-resolver:
+              config:
+                search:
+                - vz2.bos2.lab 
+                server:
+                - 192.168.18.9
+            routes:
+              config:
+              - destination: 0.0.0.0/0
+                next-hop-interface: ens1f0
+                next-hop-address: 192.168.14.1
+                table-id: 254
