@@ -20,15 +20,15 @@ spec:
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "config-policy"
       metadata:
-        name: "sriov-nnp-du-fh"
+        name: "sriov-nnp-sno132"
       spec:
-        deviceType: netdevice
-        isRdma: true
+        deviceType: vfio-pci
+        isRdma: false
         nicSelector:
-          pfNames: ["ens5f0"]
+          pfNames: ["ens1f0"]
         numVfs: 8
         priority: 10
-        resourceName: du_fh
+        resourceName: sno132
     - fileName: SriovNetwork.yaml
       policyName: "config-policy"
       metadata:
@@ -39,12 +39,12 @@ spec:
     - fileName: SriovNetworkNodePolicy.yaml
       policyName: "config-policy"
       metadata:
-        name: "sriov-nnp-du-mh"
+        name: "sriov-nnp-sno149"
       spec:
         deviceType: vfio-pci
         isRdma: false
         nicSelector:
-          pfNames: ["ens7f0"]
+          pfNames: ["ens1f0"]
         numVfs: 8
         priority: 10
-        resourceName: du_mh
+        resourceName: sno149
