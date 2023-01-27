@@ -21,7 +21,7 @@ spec:
           - type: "kafka"
             name: kafka-open
             # below url is an example
-            url: tcp://10.46.55.190:9092/test
+            url: tcp://192.168.18.90:9092/test
         pipelines:
           - name: audit-logs
             inputRefs:
@@ -66,7 +66,7 @@ spec:
         profile:
         - name: "slave"
           # This interface must match the hardware in this group
-          interface: "ens5f0"
+          interface: "ens1f0"
           ptp4lOpts: "-2 -s --summary_interval -4"
           phc2sysOpts: "-a -r -n 24"
     - fileName: SriovOperatorConfig.yaml
@@ -84,16 +84,16 @@ spec:
       policyName: "config-policy"
       spec:
         storageClassDevices:
-          - storageClassName: "example-storage-class-1"
+          - storageClassName: "ztp-storage"
             volumeMode: Filesystem
             fsType: xfs
             devicePaths:
-              - /dev/sdb1
-          - storageClassName: "example-storage-class-2"
-            volumeMode: Filesystem
-            fsType: xfs
-            devicePaths:
-              - /dev/sdb2
+              - /dev/sdb
+          #- storageClassName: "example-storage-class-2"
+            #volumeMode: Filesystem
+            #fsType: xfs
+            #devicePaths:
+              #- /dev/sdb2
     - fileName: DisableSnoNetworkDiag.yaml
       policyName: "config-policy"
     - fileName: PerformanceProfile.yaml
@@ -101,8 +101,8 @@ spec:
       spec:
         cpu:
           # These must be tailored for the specific hardware platform
-          isolated: "2-19,22-39"
-          reserved: "0-1,20-21"
+          isolated: "2-29,34-61"
+          reserved: "0-1,30-33,62-63"
         hugepages:
           defaultHugepagesSize: 1G
           pages:
