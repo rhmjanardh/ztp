@@ -96,6 +96,12 @@ spec:
               #- /dev/sdb2
     - fileName: DisableSnoNetworkDiag.yaml
       policyName: "config-policy"
+    - fileName: PaoSubscriptionNS.yaml
+      policyName: "config-policy"
+    - fileName: PaoSubscription.yaml
+      policyName: "config-policy"
+    - fileName: PaoSubscriptionOperGroup.yaml  
+      policyName: "config-policy"   
     - fileName: PerformanceProfile.yaml
       policyName: "config-policy"
       spec:
