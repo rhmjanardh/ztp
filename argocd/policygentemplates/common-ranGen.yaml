@@ -46,7 +46,7 @@ spec:
     # hub cluster is 4.11 and above
     - fileName: PaoSubscription.yaml
       policyName: "subscriptions-policy"
-      complianceType: mustthave
+      complianceType: musthave
       spec:
         channel: "4.9"
     - fileName: PaoSubscriptionNS.yaml
