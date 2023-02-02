@@ -44,7 +44,7 @@ spec:
         deviceType: vfio-pci
         isRdma: false
         nicSelector:
-          pfNames: ["ens1f0"]
+          pfNames: ["ens1f1"]
         numVfs: 8
         priority: 10
         resourceName: nic1
