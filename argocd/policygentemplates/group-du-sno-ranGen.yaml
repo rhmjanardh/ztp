@@ -98,6 +98,8 @@ spec:
       policyName: "config-policy"
     - fileName: PerformanceProfile.yaml
       policyName: "config-policy"
+      metadata:
+        name: openshift-node-performance-profile
       spec:
         cpu:
           # These must be tailored for the specific hardware platform
@@ -110,9 +112,9 @@ spec:
               count: 32
               node: 0
         machineConfigPoolSelector:
-          pools.operator.machineconfiguration.openshift.io/role: "master"
+          pools.operator.machineconfiguration.openshift.io/$mcp: ""
         nodeSelector:
-          node-role.kubernetes.io/master: ""        
+          node-role.kubernetes.io/$mcp: ''       
     - fileName: TunedPerformancePatch.yaml
       policyName: "config-policy"
       spec:
