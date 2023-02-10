@@ -22,9 +22,9 @@ spec:
         count: $count
         node: $node
   machineConfigPoolSelector:
-    pools.operator.machineconfiguration.openshift.io/$mcp: ""
+    pools.operator.machineconfiguration.openshift.io/role: "$mcp"
   nodeSelector:
-    node-role.kubernetes.io/$mcp: ''
+    node-role.kubernetes.io/role: '$mcp'
   numa:
     topologyPolicy: "restricted"
   # To use the standard (non-realtime) kernel, set enabled to false

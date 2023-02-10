@@ -110,9 +110,9 @@ spec:
               count: 32
               node: 0
         machineConfigPoolSelector:
-          pools.operator.machineconfiguration.openshift.io/master: ""
+          pools.operator.machineconfiguration.openshift.io/role: "master"
         nodeSelector:
-          node-role.kubernetes.io/master: ''        
+          node-role.kubernetes.io/role: 'master'        
     - fileName: TunedPerformancePatch.yaml
       policyName: "config-policy"
       spec:
