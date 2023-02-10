@@ -46,16 +46,16 @@ spec:
     # hub cluster is 4.11 and above   
     - fileName: PaoSubscriptionNS.yaml
       policyName: "subscriptions-policy"
-      complianceType: mustnothave      
+      complianceType: musthave      
     - fileName: PaoSubscriptionOperGroup.yaml  
       policyName: "subscriptions-policy"
-      complianceType: mustnothave
+      complianceType: musthave
     - fileName: PaoSubscription.yaml
       policyName: "subscriptions-policy"
-      complianceType: mustnothave       
+      complianceType: musthave       
     - fileName: PaoOperatorStatus.yaml
       policyName: "subscriptions-policy"
-      complianceType: mustnothave       
+      complianceType: musthave       
     #- fileName: ReduceMonitoringFootprint.yaml
       #policyName: "config-policy"
     #
