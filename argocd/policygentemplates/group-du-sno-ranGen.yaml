@@ -112,7 +112,7 @@ spec:
         machineConfigPoolSelector:
           pools.operator.machineconfiguration.openshift.io/role: "master"
         nodeSelector:
-          node-role.kubernetes.io/role: 'master'        
+          node-role.kubernetes.io/master: ""        
     - fileName: TunedPerformancePatch.yaml
       policyName: "config-policy"
       spec:

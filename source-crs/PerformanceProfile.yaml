@@ -24,7 +24,7 @@ spec:
   machineConfigPoolSelector:
     pools.operator.machineconfiguration.openshift.io/role: "$mcp"
   nodeSelector:
-    node-role.kubernetes.io/role: '$mcp'
+    node-role.kubernetes.io/master: ""
   numa:
     topologyPolicy: "restricted"
   # To use the standard (non-realtime) kernel, set enabled to false
