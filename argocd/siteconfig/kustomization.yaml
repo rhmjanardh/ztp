@@ -7,4 +7,4 @@ generators:
 - ztsno149.yaml
 - sno132-e920t.yaml
 #- sno182_mwc.yaml
-#- bos2ipv6.yaml
+- bos2ipv6.yaml
