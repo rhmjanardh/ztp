@@ -53,6 +53,11 @@ spec:
                 type: ethernet
                 state: up
                 macAddress: "52:52:00:6c:3a:af"
+                ipv4:
+                  enabled: True
+                  address:
+                  - ip: 192.168.18.68 
+                    prefix-length: 25
                 ipv6:
                   enabled: True
                   address:
