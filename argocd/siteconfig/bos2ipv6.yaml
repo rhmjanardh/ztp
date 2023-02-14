@@ -38,7 +38,7 @@ spec:
           name: "bos2ipv6-bmc-secret"
         bmc:
           disableCertificateVerification: "true"        
-        bootMACAddress: "52:52:00:6c:3a:af"
+        bootMACAddress: "52:54:00:6c:3a:af"
         bootMode: "UEFI"
         rootDeviceHints:
           deviceName: "/dev/nvme0n1"
@@ -46,18 +46,18 @@ spec:
         nodeNetwork:
           interfaces:
             - name: enp1s0
-              macAddress: "52:52:00:6c:3a:af"
+              macAddress: "52:54:00:6c:3a:af"
           config:
             interfaces:
               - name: enp1s0
                 type: ethernet
                 state: up
-                macAddress: "52:52:00:6c:3a:af"
-                ipv4:
-                  enabled: True
-                  address:
-                  - ip: 192.168.18.68 
-                    prefix-length: 25
+                macAddress: "52:54:00:6c:3a:af"
+                #ipv4:
+                  #enabled: True
+                  #address:
+                  #- ip: 192.168.18.68 
+                    #prefix-length: 25
                 ipv6:
                   enabled: True
                   address:
