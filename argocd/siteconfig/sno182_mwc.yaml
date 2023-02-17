@@ -31,8 +31,8 @@ spec:
       - 2.rhel.pool.ntp.org
     nodes:
     - hostName: "sno182.workload.bos2.lab"
-        role: "master"
-        automatedCleaningMode: "metadata"
+      role: "master"
+      automatedCleaningMode: "metadata"
       bmcAddress: "redfish-virtualmedia://192.168.18.182/redfish/v1/Systems/1"
       bmcCredentialsName: 
         name: "sno182-bmc-secret"
