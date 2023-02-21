@@ -58,10 +58,10 @@ spec:
                 address:
                 - ip: 2600:52:7:18::b6
                   prefix-length: 64
-            dns-resolver:
-              config:
-                server:
-                - "2600:52:7:18::9"
+          dns-resolver:
+            config:
+              server:
+              - "2600:52:7:18::9"
           routes:
             config:
             - destination: ::/0
