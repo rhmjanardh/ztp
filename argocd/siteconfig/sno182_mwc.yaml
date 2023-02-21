@@ -56,8 +56,12 @@ spec:
               ipv6:
                 enabled: True
                 address:
-                - ip: 2600:52:7:18::e6
+                - ip: 2600:52:7:18::b6
                   prefix-length: 64
+            dns-resolver:
+              config:
+                server:
+                - "2600:52:7:18::9"
           routes:
             config:
             - destination: ::/0
