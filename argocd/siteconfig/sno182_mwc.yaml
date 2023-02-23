@@ -10,7 +10,7 @@ spec:
   pullSecretRef:
     name: "assisted-deployment-pull-secret-sno182"
   clusterImageSetNameRef: "img4.12.0-x86-64-appsub"
-  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtSAUavTTr4dTvMOqZ/A6mg9q++qrVSNIu3vICnGUPpKGmQk4227TlaL9iwBkBqbGMvOaBZwn/b3URk/QE/El5ElzqaNNJxHqxWHGNKOJB49sVj5f57Usw07WyMy8CDy0Hk701jzvrdxqckfMEmMzWjE0C7Zpus6J3GyG3ANTYbSQGRtzdz7bcg05Xm0xCzfC/HAEF6Arz/cTv9k9rioiu1reV1qqq+FAlnKx3x/+XsG5cHMhnVuUnOU59p9pOh+v/nxq5Ysz/5iJrKNmJqkUAPShrfs3Kk2Z8TJVoEKoyyfme4uNAqBg2xZjnaPf8avfmc8uYzjHN7BA4w1fMw/mO71FCXkuxukttUeoqO2ARpofwzIeiH2wmJ7fKLaomETbZyIzYiVoZM2VKu1nPNmWOluqrpvNBnufWLpmRqWntmvT26IEGmlAjTz1HV0VZXVo+6viI3RQTJJXeZ7uTjCPz/uVsrv5U2BthWIkJ7OJEB0mcwbSJF5FOhML8dZ+/ODc= mjanardh@mjanardh.remote.csb"
+  sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDHTi9ENWyG0c/fWECb+NNOHA2GXxnXIsO6JeGzGDGkd kni@ipi-prov"
   clusters:
   - clusterName: "sno182"
     networkType: "OVNKubernetes"
