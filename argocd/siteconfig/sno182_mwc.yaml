@@ -6,6 +6,8 @@ metadata:
   namespace: "sno182"
 spec:
   baseDomain: "workload.bos2.lab"
+  proxy:
+    httpsProxy: https://root:Redhat!123@2600:52:7:18::9:3128
   automatedCleaningMode: "metadata"
   pullSecretRef:
     name: "assisted-deployment-pull-secret-sno182"
