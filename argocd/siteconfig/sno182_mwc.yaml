@@ -6,8 +6,6 @@ metadata:
   namespace: "sno182"
 spec:
   baseDomain: "workload.bos2.lab"
-  proxy:
-    httpsProxy: https://root:Redhat!123@2600:52:7:18::9:3128
   automatedCleaningMode: "metadata"
   pullSecretRef:
     name: "assisted-deployment-pull-secret-sno182"
@@ -29,6 +27,10 @@ spec:
       - cidr: 2600:52:7:18::/64
     serviceNetwork:
       - fd02::/112
+    proxy:
+      httpProxy: http://[2600:52:7:18::9]:8081
+      httpsProxy: http://[2600:52:7:18::9]:8081
+      noProxy: 6183
     additionalNTPSources:
       - 2.rhel.pool.ntp.org
     nodes:
@@ -45,6 +47,10 @@ spec:
       rootDeviceHints:
         deviceName: "/dev/nvme0n1"
       cpuset: "0-1,32-33,62-63"
+      proxy:
+        httpProxy: http://[2600:52:7:18::9]:8081
+        httpsProxy: http://[2600:52:7:18::9]:8081
+        noProxy: 6183
       nodeNetwork:
         interfaces:
           - name: ens10f1
