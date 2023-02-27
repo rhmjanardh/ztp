@@ -30,7 +30,7 @@ spec:
     proxy:
       httpProxy: http://[2600:52:7:18::9]:3128
       httpsProxy: http://[2600:52:7:18::9]:3128
-      noProxy: 6183
+      noProxy: workload.bos2.lab,wl-infra.workload.bos2.lab,192.168.18.128/25,192.168.18.0/25,6183
     additionalNTPSources:
       - 2.rhel.pool.ntp.org
     nodes:
@@ -50,7 +50,7 @@ spec:
       proxy:
         httpProxy: http://[2600:52:7:18::9]:3128
         httpsProxy: http://[2600:52:7:18::9]:3128
-        noProxy: 6183
+        noProxy: workload.bos2.lab,wl-infra.workload.bos2.lab,192.168.18.128/25,192.168.18.0/25,6183
       nodeNetwork:
         interfaces:
           - name: ens10f1
