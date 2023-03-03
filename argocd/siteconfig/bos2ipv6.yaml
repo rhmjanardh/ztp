@@ -37,7 +37,7 @@ spec:
       - hostName: "bos2ipv6.workload.bos2.lab"
         role: "master"
         automatedCleaningMode: "metadata"
-        bmcAddress: "redfish-virtualmedia://[2600:52:7:218::158]:8080/redfish/v1/Systems/7d4f98ce-d5d6-4dcd-9b9e-a47a575d71aa"
+        bmcAddress: "redfish-virtualmedia://[2600:52:7:218::158]/redfish/v1/Systems/7d4f98ce-d5d6-4dcd-9b9e-a47a575d71aa"
         bmcCredentialsName: 
           name: "bos2ipv6-bmc-secret"
         bmc:
