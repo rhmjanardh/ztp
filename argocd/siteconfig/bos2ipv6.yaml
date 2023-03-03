@@ -76,7 +76,6 @@ spec:
                 search:
                 - workload.bos2.lab
                 server:
-                - 192.168.18.9
                 - 2600:52:7:18::9
 
             routes:
