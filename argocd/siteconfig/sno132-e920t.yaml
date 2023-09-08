@@ -32,7 +32,7 @@ spec:
       - 172.30.0.0/16
     networkType: OVNKubernetes
     nodes:
-    - bmcAddress: redfish-virtualmedia://192.168.14.132/redfish/v1/Systems/1
+    - bmcAddress: "redfish-virtualmedia://192.168.14.132/redfish/v1/Systems/1"
       bmcCredentialsName:
         name: sno132-bmc-secret
       bootMACAddress: b4:96:91:d1:f2:34
