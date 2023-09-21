@@ -8,3 +8,4 @@ generators:
 - sno132-e920t.yaml
 - sno182_mwc.yaml
 - bos2ipv6.yaml
+- sno166-worker.yaml
