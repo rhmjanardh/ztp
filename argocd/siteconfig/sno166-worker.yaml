@@ -41,7 +41,7 @@ spec:
         deviceName: /dev/sdb
       cpuset: "0,2,30,32,34,36,62,64"
       hostName: sno166.workload.bos2.lab
-      role: "worker"
+      role: "master"
       nodeNetwork:
           interfaces:
             - name: "ens1f0"
