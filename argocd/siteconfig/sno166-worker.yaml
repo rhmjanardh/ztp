@@ -10,7 +10,7 @@ spec:
   baseDomain: "workload.bos2.lab"
   pullSecretRef:
     name: "assisted-deployment-pull-secret-sno166"
-  clusterImageSetNameRef: "img4.12.31-multi-appsub"
+  clusterImageSetNameRef: "img4.14.rc-multi-appsub"
   sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDHTi9ENWyG0c/fWECb+NNOHA2GXxnXIsO6JeGzGDGkd kni@ipi-prov"
   clusters:
   - additionalNTPSources:
