@@ -1,0 +1,71 @@
+# sno.yaml - test message to trigger synch#
+apiVersion: ran.openshift.io/v1
+kind: SiteConfig
+metadata:
+  name: "sno167"
+  namespace: "sno167"
+  labels:
+    forcesync: "2"
+spec:
+  baseDomain: "workload.bos2.lab"
+  pullSecretRef:
+    name: "assisted-deployment-pull-secret-sno167"
+  clusterImageSetNameRef: "img4.14.rc-multi-appsub"
+  sshPublicKey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDHTi9ENWyG0c/fWECb+NNOHA2GXxnXIsO6JeGzGDGkd kni@ipi-prov"
+  clusters:
+  - additionalNTPSources:
+    - pool.ntp.org
+    - clock.corp.redhat.com
+    clusterLabels:
+      common: true
+      group-du-sno: ""
+      sites: sno
+    clusterName: sno167
+    clusterNetwork:
+      - cidr: 10.128.0.0/14
+        hostPrefix: 23
+    clusterProfile: du
+    clusterType: sno
+    machineNetwork:
+      - cidr: 192.168.18.0/25
+    serviceNetwork:
+      - 172.30.0.0/16
+    networkType: OVNKubernetes
+    nodes:
+    - bmcAddress: "idrac-virtualmedia://192.168.18.167/redfish/v1/Systems/System.Embedded.1"
+      bmcCredentialsName:
+        name: sno167-bmc-secret
+      bootMACAddress: 50:7c:6f:53:e6:28
+      bootMode: UEFI
+      rootDeviceHints:
+        deviceName: /dev/sdb
+      cpuset: "0,2,30,32,34,36,62,64"
+      hostName: sno167.workload.bos2.lab
+      role: "master"
+      nodeNetwork:
+          interfaces:
+            - name: "ens1f0"
+              macAddress: "50:7c:6f:53:e6:28"
+          config:
+            interfaces:
+              - name: "ens1f0"
+                type: ethernet
+                state: up
+                macAddress: "50:7c:6f:53:e6:28"
+                ipv4:
+                  enabled: true
+                  address:
+                  - ip: 192.168.18.48
+                    prefix-length: 25
+            dns-resolver:
+              config:
+                search:
+                - workload.bos2.lab 
+                server:
+                - 192.168.18.9
+            routes:
+              config:
+              - destination: 0.0.0.0/0
+                next-hop-interface: ens1f0
+                next-hop-address: 192.168.18.1
+                table-id: 254
