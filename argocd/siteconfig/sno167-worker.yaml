@@ -55,7 +55,7 @@ spec:
                 ipv4:
                   enabled: true
                   address:
-                  - ip: 192.168.18.48
+                  - ip: 192.168.18.49
                     prefix-length: 25
             dns-resolver:
               config:
