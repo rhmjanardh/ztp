@@ -9,3 +9,4 @@ generators:
 - sno182_mwc.yaml
 - bos2ipv6.yaml
 - sno166-worker.yaml
+- sno167-worker.yaml
